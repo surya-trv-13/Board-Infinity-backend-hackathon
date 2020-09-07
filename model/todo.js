@@ -23,10 +23,10 @@ var todoSchema = new Schema({
   },
   createdAt: {
     type: Number,
-    required: true,
+    default: new Date().getTime(),
   },
 });
 
-var TodoModel = mongoose.model("Todo", todoSchema);
+var Todo = mongoose.model("Todo", todoSchema);
 
-module.exports = { TodoModel };
+module.exports = { Todo };
