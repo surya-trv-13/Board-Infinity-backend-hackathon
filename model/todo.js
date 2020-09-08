@@ -3,29 +3,32 @@ const validator = require("validator");
 
 var Schema = mongoose.Schema;
 
-var todoSchema = new Schema({
-  taskName: {
-    required: true,
-    type: String,
-    minlength: 5,
-    trim: true,
+var todoSchema = new Schema(
+  {
+    taskName: {
+      required: true,
+      type: String,
+      minlength: 5,
+      trim: true,
+    },
+    taskDescription: {
+      type: String,
+    },
+    creator: {
+      type: String,
+      required: true,
+    },
+    duration: {
+      type: Number,
+      required: true,
+    },
+    createdAt: {
+      type: Number,
+      required: true,
+    },
   },
-  taskDescription: {
-    type: String,
-  },
-  creator: {
-    type: String,
-    required: true,
-  },
-  duration: {
-    type: Number,
-    required: true,
-  },
-  createdAt: {
-    type: Number,
-    default: new Date().getTime(),
-  },
-});
+  { timestamps: true }
+);
 
 var Todo = mongoose.model("Todo", todoSchema);
 

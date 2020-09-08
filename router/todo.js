@@ -1,12 +1,13 @@
 const { Router } = require("express");
 const { Todo } = require("../model/todo");
-
 const router = Router();
 
 // POST /add
 router.post("/add", async (request, response) => {
-  var todo = new Todo(request.body);
+  //Adding the "createdAt" key during add.
+  request.body["createdAt"] = new Date().getTime();
 
+  let todo = new Todo(request.body);
   try {
     await todo.save();
     response.status(201).send({ result: todo });

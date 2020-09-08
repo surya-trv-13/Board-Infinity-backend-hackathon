@@ -2,10 +2,10 @@ const express = require("express");
 const bodyParser = require("body-parser");
 require("./database/db");
 
-var todoRouter = require("./router/todo");
+let todoRouter = require("./router/todo");
 
-var PORT = process.env.PORT;
-var app = express();
+let PORT = process.env.PORT;
+let app = express();
 
 app.use(bodyParser.json());
 app.use(todoRouter);
