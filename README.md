@@ -1,5 +1,12 @@
 # BOARD INFINITY BACKEND HACKATHON
 
+```
+Name :Suryanarayan Rath
+Roll no. :1729083
+University :KIIT UNIVERSITY
+Branch :Computer Scinece and Communication Engineering
+```
+
 ## Day-to-Day Tasks
 
 ### 06-September-2020
@@ -25,4 +32,11 @@
 
 ## Demo JSON structure for adding Todo
 
-{ "taskName": "Name of the task", "taskDescription": "Description of the task", "creator": "Creator of the task", "duration": "Duration in minutes (Number)" }
+```
+{
+    "taskName": "Name of the task",
+    "taskDescription": "Description of the task",
+    "creator": "Creator of the task",
+    "duration": "Duration in minutes (Number)"
+}
+```
