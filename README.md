@@ -22,3 +22,7 @@
 
 - Restructured code.
 - Implemented condition to delete todos dynamically
+
+## Demo JSON structure for adding Todo
+
+`{ "taskName": "Name of the task", "taskDescription": "Description of the task", "creator": "Creator of the task", "duration": "Duration in minutes (Number)" }`
