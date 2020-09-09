@@ -20,7 +20,25 @@ router.post("/add", async (request, response) => {
 router.get("/list", async (request, response) => {
   try {
     const todos = await Todo.find({});
-    response.status(200).send({ result: todos });
+    let tempTodos = todos;
+    todos.map((todo, index) => {
+      let time = new Date().getTime();
+
+      if (todo.createdAt + todo.duration * 60000 < time) {
+        tempTodos.splice(index, 1);
+      }
+    });
+    response.status(200).send({ result: tempTodos });
+  } catch (error) {
+    response.status(500).send({ error });
+  }
+});
+
+// Optional
+router.delete("/delete", async (request, response) => {
+  try {
+    const todos = await Todo.deleteMany({});
+    response.status(200).send({ todos });
   } catch (error) {
     response.status(500).send({ error });
   }
