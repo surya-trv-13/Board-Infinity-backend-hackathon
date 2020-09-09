@@ -1,6 +1,6 @@
 const express = require("express");
 const bodyParser = require("body-parser");
-require("./database/db");
+require("./Database/db");
 
 let todoRouter = require("./router/todo");
 

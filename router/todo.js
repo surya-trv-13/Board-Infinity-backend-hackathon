@@ -34,14 +34,4 @@ router.get("/list", async (request, response) => {
   }
 });
 
-// Optional
-router.delete("/delete", async (request, response) => {
-  try {
-    const todos = await Todo.deleteMany({});
-    response.status(200).send({ todos });
-  } catch (error) {
-    response.status(500).send({ error });
-  }
-});
-
 module.exports = router;
