@@ -25,4 +25,4 @@
 
 ## Demo JSON structure for adding Todo
 
-`{ "taskName": "Name of the task", "taskDescription": "Description of the task", "creator": "Creator of the task", "duration": "Duration in minutes (Number)" }`
+{ "taskName": "Name of the task", "taskDescription": "Description of the task", "creator": "Creator of the task", "duration": "Duration in minutes (Number)" }
