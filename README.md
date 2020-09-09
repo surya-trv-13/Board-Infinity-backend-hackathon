@@ -17,3 +17,8 @@
 ### 08-September-2020
 
 - Implemented CRON job to dynamically delete data from MongoDB at specific duration.
+
+### 09-September-2020
+
+- Restructured code.
+- Implemented condition to delete todos dynamically
